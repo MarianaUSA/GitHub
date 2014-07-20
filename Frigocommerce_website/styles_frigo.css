@@ -1,0 +1,33 @@
+* {font-family: Helvetica, Arial, sans-serif}
+h1 {float:right; text-align:center; width:700px;}
+h1 a {font-family:cursive; font-style:italic; font-weight:bold; color:#000; text-shadow:gray; text-decoration:none}
+h2, h3 {font-style:italic; font-weight:bold}
+h4{font-style:italic; font-weight:bold; text-decoration:underline}
+
+
+#logo {width:210px; height:150px; padding-left:10px; padding-top:30px}
+
+#header {background-color:orange; border:3px black solid}
+
+#motto{font: cursive; font-style:italic; font-size: 0.8em; color: gray; background-color:orange}
+
+#sidenavigation {float:left; width:170px; color: black; background-color:orange}
+sidenavigationlink a:hover {color:black; text-decoration:underline}
+.sidenavigationlink{color:black}
+#bodycolor{background-color:gray; padding:20px}
+#content {padding-left:240px}
+
+.frame {background-color:orange; width:210px; height:250px}
+.frigo_part_img {width:200px; height:200px}
+.store_img{float:right; width:500px; height:300px}
+.design1_img {float:left; width:700px; height:300px}
+.comment{float:left}
+
+.contact_us {width: 45%; float: left}
+#map{width:380px; height:400px; padding: 5px, 5px; margin-right: 5px}
+div.column {width: 45%; float: left; padding-right: 10px; margin: 10px 10px;}
+.rowspace {width: 45%; float: left; padding-right: 5px; margin: 10px 5px; font-size:large; font-weight:bold}
+#newtext{float:left; padding-left:10px}
+#rowspan{float: left; padding-right: 5px; margin: 10px 5px}
+h2,p.important {font-style:italic; font-weight: bold; text-decoration:underline}
+footer {clear:both; margin:20px 0px; font-weight:bold; font-style:italic; background-color:orange; color:black}
