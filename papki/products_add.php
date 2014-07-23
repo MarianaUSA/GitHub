@@ -15,7 +15,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
 	redirect('products.php');
 }
-$data=products_get($_GET['id']);
+//$data=products_get($_GET['id']);
 require_once('include/header.php');
 
 ?>
