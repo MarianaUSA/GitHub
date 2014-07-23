@@ -27,7 +27,7 @@ function db_insert($table, $data)
         INSERT INTO '.$table.'('.$keys.')
         VALUES ('.$vals.')'
     );
-    return $buf;
+    return mysqli_insert_id($db_connection);
 }
 
 function db_update($table, $data, $id)

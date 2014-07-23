@@ -21,6 +21,15 @@ function products_images_get($id, $products_id) {
     return mysqli_fetch_assoc($res);
 }
 
+function products_orders_get($product_title, $product_price) {
+	global $db_connection;
+	$sql = '
+		SELECT id, product_title, product_price
+		FROM orders
+		WHERE product_title = '.$product_title.' AND product_price = '.$product_price;
+	$res = mysqli_query(db_connection, $sql);
+	return mysqli_fetch_assoc($res);
+}
 function products_get_all_count() {
 
     $sql ='
@@ -44,3 +53,4 @@ function products_images_get_all($products_id) {
 
     return $result;
 }
+?>

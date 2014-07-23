@@ -44,3 +44,13 @@ function products_images_get_all($products_id) {
 
     return $result;
 }
+function products_orders_get($product_title) {
+    $sql = '
+        SELECT id, product_title, product_price
+        FROM orders
+        WHERE products_title = '.$product_title;
+
+    $result = db_select($sql);
+
+    return $result;
+}

@@ -20,6 +20,7 @@ $one_product_images = products_images_get_all($_GET['id']); // get all products_
 
 ?>
 
+
 <html>
 <head>
 	<title>details_frigo</title>
@@ -44,7 +45,7 @@ $one_product_images = products_images_get_all($_GET['id']); // get all products_
 				<p class="important"><?=$one_product['price']?></p>
 				<br>
 				<br>
-				<button type="search">Buy Now</button>
+				<a href="order_frigo.php?id=<?=$one_product['id']?>"><button type="search">Buy Now</button></a>
 			</div>
 			<p class="comment"><?=$one_product['short_description']?></p>
 			<br>

@@ -15,7 +15,7 @@ $sql = '
 	WHERE a.title = '.$_POST['catalog'];
 $data = db_select($sql);
 
-one_product = products_get($_GET['id']);
+$one_product = products_get($_GET['id']);
 
 $one_product_images = products_images_get_all($_GET['id']); // get all products_images for a product 
 

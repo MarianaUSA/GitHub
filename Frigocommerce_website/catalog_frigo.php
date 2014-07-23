@@ -30,23 +30,23 @@ $data = db_select($sql);
 $success = false;
 $errors = false;
 
-if($_SERVER['REQUEST_METHOD'] == 'POST' && $_POST['catalog'] !== '' && $_POST['order_by'] == 'price') {
+if($_SERVER['REQUEST_METHOD'] == 'POST' && $_POST['catalog'] !== '') {
     $title=$_POST['catalog'];
-	foreach($data as $key => $value) {
-		if ($title == $value['title']) {
+	/*foreach($data as $key => $value) {
+		if ($title == $value['title']) { */
 	$sql = '
 	SELECT a.id, a.title, a.price, a.short_description, b.title as image
 	FROM products a
 	LEFT JOIN products_images b ON a.id = b.products_id
+	WHERE a.title="'.$title.'"
 	GROUP BY a.id 
-	ORDER BY a.price ASC
-	WHERE a.title = '.$title;
+	ORDER BY a.price ASC';
+
 	
 	$data = db_select($sql); 
-	
+            
 	$success = true;
-}
-}
+
 } else {
     $errors = true;
 }
@@ -55,7 +55,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST' && $_POST['catalog'] !== '' && $_POST['o
 <?php if($success == true): ?>
 <div class="success">
 
-<a href="catalog_search_results.php?id=<?=$value['id']?>">Click here to see the results of your search</a>
+<!--<a href="catalog_search_result.php?id=<?//=$value['id']?>">Click here to see the results of your search</a>-->
 
 </div>
 <?php endif; ?>
@@ -66,8 +66,11 @@ if($_SERVER['REQUEST_METHOD'] == 'POST' && $_POST['catalog'] !== '' && $_POST['o
 			
 			<div class="column">
 				<br>
-				<label for="search">Search:<input type="text" name="catalog" id="catalog" value=""></label>
-				<button type="search">Search</button>
+				<form action="" method="post">
+					<label for="search">Search:<input type="text" name="catalog" id="catalog" value=""></label>
+				
+					<button type="submit">Search</button>
+				</form>
 			</div>
 			
 			<div class="column">
